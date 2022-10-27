@@ -9,10 +9,10 @@ const firebaseConfig = {
   };
   
   // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
+  firebase.initializeApp(firebaseConfig);
   function addUser(){
-   guardaUser=document.getElementById("nomeUser").value;
-   firebase.database().ref("/").child(guardaUser).update({
+   userName=document.getElementById("userName").value;
+   firebase.database().ref("/").child(userName).update({
        acao:"Novo Usuário",
        senha:document.getElementById("senha").value
    });
